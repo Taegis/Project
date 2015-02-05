@@ -132,7 +132,7 @@ def main():
         "3 option popup"
         if globalvars.onotclsed == 1:
             font = pygame.font.Font("images/mvboli2.ttf", 12)
-            font2 = pygame.font.Font("images/mvboli2.ttf", 15)
+            font2 = pygame.font.Font("images/mvboli2.ttf", 14)
             dimensionsopopup = pygame.Rect(globalvars.opopupbox)
             globalvars.opopupscrn = globalvars.screen.blit(globalvars.opopupld, (280,100))
             optionpopuptext = render_textrect(globalvars.opopuptxt, font2, dimensionsopopup, (1,1,1))

@@ -22,6 +22,14 @@ def Event1():
     globalvars.option3txt = "Hide below decks and hope you arn't caught."
     globalvars.eventactive = 2
     globalvars.Event1flagged = 1
+
+def Event15():
+    globalvars.onotclsed = 1
+    globalvars.opopuptxt = "Through all the commotion, you're able to slip away unnoticed and lock yourself in a storage cellar belowdecks. After a bit, you can hear cannon fire coming from your own ship and the sounds of crashing and screaming resulting from enemy cannonfire. You close your eyes and ignore the terror as best as you can while you await your fate... Eventually musketfire can be heard above decks and you can tell that the fighting is not going well. An hour passes and the figthing as died down and you hear banging at the door. You approach the door as it's busted down and you have been captured by the enemy."
+    globalvars.option1txt = "I shouldn't have hid."
+    globalvars.option2txt = "I let them down."
+    globalvars.option3txt = "I'm a coward."
+    globalvars.eventactive = 16
         
 def Event2():
     globalvars.onotclsed = 1
@@ -37,7 +45,15 @@ def Event13():
     globalvars.option1txt = "Preload muskets"
     globalvars.option2txt = "Hide below decks and hope you arn'y caught."
     globalvars.option3txt = "Hide below decks and hope you arn't caught."
-    globalvars.eventactive = 13
+    globalvars.eventactive = 14
+
+def Event14():
+    globalvars.onotclsed = 1
+    globalvars.opopuptxt = "You start to load muskets lined along the side of the ship for future confrontation, all the while crashing and screaming can be heard below deck due to the trading of fire."
+    globalvars.option1txt = "Continue your task."
+    globalvars.option2txt = "Return below deck to follow orders."
+    globalvars.option3txt = "Go belowdeck to hide."
+    globalvars.eventactive = 15
         
 def Event11():
     globalvars.onotclsed = 1
@@ -146,18 +162,44 @@ def option1():
         
     elif globalvars.eventactive == 10:
         Event6()
+    
+    elif globalvars.eventactive == 14:
+        Event14()
+        
+    elif globalvars.eventactive == 15:
+		Event8()
 
 def option2():   
     if globalvars.eventactive == 2:
         Event7()
+        
     elif globalvars.eventactive == 3:
-	Event13()
+		Event13()
+		
     elif globalvars.eventactive == 8:
-	Event2()  
+		Event2()
+		
     elif globalvars.eventactive == 9:
         Event10()
         
+    elif globalvars.eventactive == 15:
+		Event2()
+	 
+    elif globalvars.eventactive == 14:
+		Event15()
+	
+    elif globalvars.eventactive == 4:
+		Event15()
+	  
 def option3():
-    if globalvars.eventactive == 1:
-        globalvars.notclsed = 1
-        globalvars.popmsg = "You hide below decks and avoid the fighting. Victory can be heard above decks and you have not been caught. You're safe for now."
+    if globalvars.eventactive == 2:
+		Event15()
+		
+    elif globalvars.eventactive == 2:
+		Event15()
+		
+    elif globalvars.eventactive == 14:
+		Event15()
+	
+    elif globalvars.eventactive == 4:
+		Event15()
