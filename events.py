@@ -195,7 +195,7 @@ def option3():
     if globalvars.eventactive == 2:
 		Event15()
 		
-    elif globalvars.eventactive == 2:
+    elif globalvars.eventactive == 3:
 		Event15()
 		
     elif globalvars.eventactive == 14:
